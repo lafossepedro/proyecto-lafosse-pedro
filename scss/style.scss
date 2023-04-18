@@ -1,0 +1,264 @@
+/*ESTILOS PROPIOS*/
+
+$color_1: #333;
+$color_2: #fff;
+$color_3: white;
+$font-family_1: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+$background-color_1: white;
+$background-color_2: #FFC0CB;
+$background-color_3: #FFD1DC;
+$background-color_4: #fcdee3;
+$background-color_5: #f5f5f5;
+$background-color_6: #fff;
+$background-color_7: #4CAF50;
+$background-color_8: #3e8e41;
+$background-color_9: #c9e4f4;
+$background-color_10: #d7eacc;
+$background-color_11: #f9d2e5;
+$background-color_12: rgb(93, 173, 93);
+
+* {
+	margin: 0;
+	font-family: $font-family_1;
+	color: $color_1;
+	text-align: center;
+	text-decoration: none;
+}
+.fondo {
+	background-image: url(../media/fondo.png);
+}
+p {
+	font-size: 0.9em;
+}
+li {
+	font-size: 0.9em;
+}
+.banner {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+	max-height: 200px;
+}
+.banner-superior {
+	display: flex;
+	justify-content: center;
+	background-color: $background-color_1;
+}
+nav {
+	ul {
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		background-color: $background-color_2;
+		font-weight: bold;
+	}
+	a {
+		display: inline-block;
+		padding: 1em;
+		&:hover {
+			background-color: $background-color_3;
+			transition: 0.4s;
+		}
+	}
+}
+h1 {
+	padding: 20px;
+}
+h2 {
+	padding: 20px;
+	color: $color_1;
+}
+h2.title {
+	font-size: 1.8em;
+}
+.slider {
+	display: flex;
+	.slide {
+		img {
+			max-width: 100%;
+			height: auto;
+			max-height: 250px;
+		}
+	}
+	.slide-testimonial {
+		img {
+			max-width: 100%;
+			height: auto;
+			max-height: 150px;
+			border-radius: 50%;
+			margin: 10px;
+		}
+	}
+}
+.slide {
+	flex: 1;
+	text-align: center;
+	padding: 2em;
+	max-width: 100%;
+	height: auto;
+}
+.slide-testimonial {
+	@extend .slide;
+	max-width: 95%;
+}
+.img-textimonio {
+	border-radius: 50%;
+	justify-content: center;
+	max-height: 50px;
+}
+.card-img-top {
+	object-fit: cover;
+}
+.galeria {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	justify-content: center;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+div.galeria {
+	a {
+		&:hover {
+			background-color: $background-color_4;
+			transition: 0.4s;
+		}
+	}
+}
+.imagen-blog {
+	box-shadow: 1px 1px 1px #888;
+}
+.texto-blog {
+	margin-inline: 20%;
+}
+.card-hover {
+	&:hover {
+		background-color: $background-color_4;
+		transition: 0.4s;
+	}
+}
+.formulario {
+	width: 400px;
+	margin: 0 auto;
+	background-color: $background-color_5;
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+.campo {
+	margin-bottom: 10px;
+}
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+input[type=text] {
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: $background-color_6;
+}
+input[type=email] {
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: $background-color_6;
+}
+textarea {
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: $background-color_6;
+}
+input[type=submit] {
+	background-color: $background-color_7;
+	color: $color_2;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	&:hover {
+		background-color: $background-color_8;
+	}
+}
+.sobre-mi {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 20px;
+	justify-content: center;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+.texto-sobre-mi {
+	margin-inline: 30%;
+}
+.spotify {
+	margin: 20px;
+}
+a {
+	text-decoration: none;
+}
+.azul {
+	background-color: $background-color_9;
+}
+.verde {
+	background-color: $background-color_10;
+}
+.rosa {
+	background-color: $background-color_11;
+}
+.card {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+@mixin button {
+  color: $color_3;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.contact-button {
+  @include button;
+  background-color: $background-color_12;
+}
+
+.blog-button {
+  @include button;
+  background-color: $background-color_2;
+}
+
+
+@media screen and (max-width: 750px) {
+	.slider {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 600px) {
+	.galeria {
+		grid-template-columns: repeat(1, 1fr);
+		flex-direction: column;
+	}
+	.texto-sobre-mi {
+		margin: 5%;
+	}
+}
